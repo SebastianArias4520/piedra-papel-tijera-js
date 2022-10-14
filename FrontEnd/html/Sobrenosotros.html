@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <title> Chiquiskill </title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --red: #FF4343;
+            --cian: #00FFD1;
+            --pple: #BD00FF;
+            --orange: #EB9938;
+            --lime: #9CEB38;
+            --darkyellow: #FFC700;
+            --sky: #00E0FF;
+            --fpink: #FF00D6;
+            --lightyellow: #FFD600;
+            --redfond: #FF3E4A;
+            --yellowborder: #FAFF00;
+            --greenfond: #BEFF54;
+            --yellowborder2: #FFD058;
+            --purplefond: #F36FFF;
+            --skyborder: #00C2FF;
+            --lightbluefond: #ECF6F8;
+            --darkpurplefond: #6F9FFC;
+            --purpleborder: #AC58FF;
+            --greenfond: #33FF00;
+            --greenborder: #7AFF58;
+            --lightyellowfond: #FCD46F;
+            --pinkborder: #FF58D0;
+            --cianfond: #C5FFF4;
+            --lightpurpleborder: #A2AFF3;
+            --slightgreenfond: #ECFFF1;
+            --slightyellowfond: #FFFBEC;
+            --slightvibrantgreenfond: #D4FBCB;
+            --slightvibrantyellowfond: #FFF2D9;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --btt: 36px;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Fredoka One', cursive;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .logo {
+            position: absolute;
+            width: 271px;
+            height: 101px;
+            left: 15px;
+            top: 15px;
+        }
+
+        .Instagram {
+            position: absolute;
+            width: 79px;
+            height: 74px;
+            left: 1235px;
+            top: 28px;
+        }
+
+        .Facebook {
+            position: absolute;
+            width: 68px;
+            height: 65px;
+            left: 1330px;
+            top: 27px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Twitter {
+            position: absolute;
+            width: 98px;
+            height: 89px;
+            left: 1400px;
+            top: 17px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .red {
+            position: absolute;
+            width: 147.2px;
+            height: 71px;
+            left: 368px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--red);
+            border-color: var(--red);
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+            border-radius: 30px;
+        }
+
+        .cian {
+            position: absolute;
+            width: 299px;
+            height: 71px;
+            left: 580px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--cian);
+            border-color: var(--cian);
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+        }
+
+        .pple {
+            position: absolute;
+            width: 299px;
+            height: 71px;
+            left: 900px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--pple);
+            border-color: var(--pple);
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+        }
+
+        .chiquiskill {
+            box-sizing: border-box;
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: -350px;
+            top: 130px;
+            z-index: -2;
+        }
+
+        .queeschiquiskill {
+            position: absolute;
+            width: 715px;
+            height: 81px;
+            left: 55px;
+            top: 180px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 67px;
+            color: #A03F3F;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .pquees {
+            position: absolute;
+            width: 480px;
+            height: 150px;
+            left: 15px;
+            top: 300px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: rgba(29, 26, 26, 0.38);
+        }
+
+        .kidgreen {
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            left: 1200px;
+            top: 120px;
+            border-radius: 50px;
+            z-index: 1;
+        }
+
+        .visionfond {
+            box-sizing: border-box;
+            position: absolute;
+            width: 600px;
+            height: 500px;
+            left: 935px;
+            top: 230px;
+            background: rgba(190, 255, 84, 0.5);
+            border: 0px solid #FFFFFF;
+            z-index: -2;
+        }
+
+        .vision {
+            position: absolute;
+            width: 215px;
+            height: 42px;
+            left: 1190px;
+            top: 390px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 55px;
+            line-height: 67px;
+            color: #527C28;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .pvision {
+            position: absolute;
+            width: 500px;
+            height: 200px;
+            left: 1030px;
+            top: 500px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: #38933B;
+        }
+
+        .misionfond {
+            box-sizing: border-box;
+            position: absolute;
+            width: 490px;
+            height: 320px;
+            left: 512px;
+            top: 425px;
+        }
+
+        .mision {
+            position: absolute;
+            width: 215px;
+            height: 42px;
+            left: 680px;
+            top: 500px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 55px;
+            line-height: 67px;
+            color: #8F42AA;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .pmision {
+            position: absolute;
+            width: 400px;
+            height: 180px;
+            left: 560px;
+            top: 590px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: #643B84;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="/html/Inicio.html">
+        <img src="./Logotipo Chiquiskillpng.png" alt="logo" class="logo">
+    </a>
+
+    <a href="/html/Inicio.html" class="red">Inicio</a>
+
+    <a href="/html/Sobrenosotros.html" class="cian">Sobre Nosotros</a>
+
+    <a href="/html/Donaciones.html" class="pple">Donaciones</a>
+
+
+
+    <img src="./Instagram.png" alt="Instagram" class="Instagram">
+    <img src="./Facebook.png" alt="Facebook" class="Facebook">
+    <img src="./twitter.png" alt="Twitter" class="Twitter">
+
+    <div class="chiquiskill-container">
+
+        <img src="./queesfond.jpg" alt="chiquiskill" class="chiquiskill">
+
+        <h1 class="queeschiquiskill"> ¿Qué es Chiquiskill? </h1>
+        <p class="pquees"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem totam quos ipsum,
+            ut atque porro error velit exercitationem accusamus sint aspernatur similique sunt quia! Sit facere
+            reiciendis sequi nam.</p>
+    </div>
+
+    <div>
+        <img src="./img3.png" alt="kidgreen" class="kidgreen">
+
+        <img src="./visionfond.jpg" alt="visionfond""
+        class=" visionfond">
+
+        <h1 class="vision"> Visión </h1>
+        <p class="pvision"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem totam quos ipsum,
+            ut atque porro error velit exercitationem accu.</p>
+
+    </div>
+
+    <div>
+
+        <img src="./misionfond.png" alt="misionfond""
+        class=" misionfond">
+
+        <h1 class="mision"> Misión </h1>
+        <p class="pmision"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem totam quos ipsum,
+            ut atque porro error velit exercitationem accu.</p>
+
+    </div>
+
+
+</body>
+
+</html>

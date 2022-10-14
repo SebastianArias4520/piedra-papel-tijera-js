@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@300;500;700&display=swap" rel="stylesheet">
+    <title> Registro Creadores </title>
+    <style>
+    :root{
+        --white: #FFFFFF;
+            --red: #FF4343;
+            --cian:#00FFD1;
+            --pple: #BD00FF;
+            --orange: #EB9938;
+            --lime: #9CEB38;
+            --darkyellow: #FFC700;
+            --sky: #00E0FF;
+            --fpink: #FF00D6;
+            --lightyellow: #FFD600;
+            --redfond: #FF3E4A;
+            --yellowborder: #FAFF00;
+            --greenfond: #BEFF54;
+            --yellowborder2: #FFD058;
+            --purplefond: #F36FFF;
+            --skyborder: #00C2FF;
+            --lightbluefond: #ECF6F8;
+            --darkpurplefond: #6F9FFC;
+            --purpleborder: #AC58FF;
+            --greenfond: #33FF00;
+            --greenborder: #7AFF58;
+            --lightyellowfond: #FCD46F;
+            --pinkborder: #FF58D0;
+            --cianfond: #C5FFF4;
+            --lightpurpleborder: #A2AFF3;
+            --slightgreenfond: #ECFFF1;
+            --slightyellowfond: #FFFBEC;
+            --slightvibrantgreenfond: #D4FBCB;
+            --slightvibrantyellowfond: #FFF2D9;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --btt:36px;
+        }
+    a {
+        text-decoration: none;
+        text-align: center;
+    }
+    body{
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Fredoka One', cursive;
+        margin: 0;
+    }
+    .login {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;   
+    }
+    .form-container {
+        display: grid;
+        grid-template-rows: auto 1fr
+        auto;
+        width: 200px;
+    }
+    .logo {
+        position: absolute;
+        width: 271px;
+        height: 101px;
+        left:15px;
+        top: 15px;
+    }
+    .Instagram {
+        position: absolute;
+        width: 79px;
+        height: 74px;
+        left: 1235px;
+        top: 28px;
+    }
+    .Facebook {
+        position: absolute;
+        width: 68px;
+        height: 65px;
+        left: 1330px;
+        top: 27px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    .Twitter {
+        position: absolute;
+        width: 98px;
+        height: 89px;
+        left: 1400px;
+        top: 17px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    .red{
+        position: absolute;
+        width: 147.2px;
+        height: 71px;
+        left: 368px;
+        top: 31px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        font-family: 'Nunito', sans-serif;
+        color: var(--white);
+        background-color: var(--red);
+        border-color: var(--red);
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 71px;
+        border-radius: 30px;
+    }
+    .cian{
+        position: absolute;
+        width: 299px;
+        height: 71px;
+        left: 580px;
+        top: 31px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        font-family: 'Nunito', sans-serif;
+        color: var(--white);
+        background-color: var(--cian);
+        border-color: var(--cian);
+        border-radius: 30px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 71px;
+    }
+    .pple{
+        position: absolute;
+        width: 299px;
+        height: 71px;
+        left: 900px;
+        top: 31px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        font-family: 'Nunito', sans-serif;
+        color: var(--white);
+        background-color: var(--pple);
+        border-color: var(--pple);
+        border-radius: 30px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 71px;
+    }
+    .Playc{
+        position: absolute;
+        width: 622px;
+        height: 334px;
+        left: 49px;
+        top: 190px;
+        border: 10px solid #FFB800;
+        border-radius: 30px;
+    }
+    .titlec{
+        position: absolute;
+        width: 363px;
+        height: 73px;
+        left: 330px;
+        top: 530px;
+        font-family: 'Fredoka One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 73px;
+        color: #EB1870;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .Creadora{
+        position: absolute;
+        width: 527px;
+        height: 330px;
+        left: -101px;
+        top: 520px;
+
+    }
+    .skyc{
+        position: absolute;
+        width: 299px;
+        height: 71px;
+        left: 338px;
+        top: 680px;
+        background: #00E0FF;
+        border-radius: 30px;
+        border: 3px solid #00E0FF;
+        position: absolute;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 71px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .skyrc{
+        position: absolute;
+        width: 299px;
+        height: 71px;
+        left: 928px;
+        top: 690px;
+        background: #00E0FF;
+        border-radius: 30px;
+        border: 3px solid #00E0FF;
+        position: absolute;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 49px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .footerc{
+        position: absolute;
+        width: 1550px;
+        height: 60px;
+        left: 0px;
+        top: 830px;
+        background: #FFC700;
+    }
+    .inputinput-nacimientoc{
+        box-sizing: border-box;
+        position: absolute;
+        width: 627px;
+        height: 67px;
+        left: 764px;
+        top: 180px;
+        background: #FFFBEC;
+        border: 3px solid #FFC700;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 41px;
+        padding-left: 10px;
+    }
+    .inputinput-usuarioc{
+        box-sizing: border-box;
+        position: absolute;
+        width: 627px;
+        height: 67px;
+        left: 764px;
+        top: 260px;
+        background: #FFFBEC;
+        border: 3px solid #FFC700;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 41px;
+        padding-left: 10px;
+    }
+    .inputinput-emailc{
+        box-sizing: border-box;
+        position: absolute;
+        width: 627px;
+        height: 67px;
+        left: 764px;
+        top: 340px;
+        background: #FFFBEC;
+        border: 3px solid #FFC700;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 41px;
+        padding-left: 10px;
+    }
+    .inputinput-contraseñac{
+        box-sizing: border-box;
+        position: absolute;
+        width: 627px;
+        height: 67px;
+        left: 764px;
+        top: 420px;
+        background: #FFFBEC;
+        border: 3px solid #FFC700;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 41px;
+        padding-left: 10px;
+    }
+    .inputinput-confirmacontraseñac{
+        box-sizing: border-box;
+        position: absolute;
+        width: 627px;
+        height: 67px;
+        left: 764px;
+        top: 500px;
+        background: #FFFBEC;
+        border: 3px solid #FFC700;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 41px;
+        padding-left: 10px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="header-container">
+        <a href="/html/Inicio.html">
+            <img src="./Logotipo Chiquiskillpng.png" alt="logo"
+            class="logo">
+            </a>
+        
+            <a href="/html/Inicio.html" class="red">Inicio</a>
+            
+            <a href="/html/Sobrenosotros.html" class="cian">Sobre Nosotros</a>
+            
+            <a href="/html/Donaciones.html" class="pple">Donaciones</a>
+        
+            <a href="/html/LoginCreadores.html" class="skyc">Iniciar Sesión</a>
+
+
+        <form>
+            <input type="submit"
+            value="Registrarse" class="skyrc">
+        </form>
+
+        <img src="./Instagram.png" alt="Instagram"
+        class="Instagram">
+        <img src="./Facebook.png" alt="Facebook"
+        class="Facebook">
+        <img src="./twitter.png" alt="Twitter"
+        class="Twitter">
+
+    </div>
+
+    <div class="video-containerc">
+        <rectangle class="videoc"></rectangle>
+        <img src="./Play.png" alt="Playc"
+        class="Playc">
+    
+        <h1 class="titlec"> CREADORES </h1>
+
+        <img src="./img5.png" alt="Creadora"
+        class="Creadora">
+    </div>
+
+    <rectangle class="footerc"></rectangle> 
+
+    <div class="loginc">
+        <div class="form-containerc">
+            <form action="/" class="formc">
+                <input type="datetime"
+                id="Nacimiento" 
+                placeholder="#"
+                class="inputinput-nacimientoc">
+                
+                <input type="text"
+                id="Usuario" 
+                placeholder="Usuario"
+                class="inputinput-usuarioc">
+                        
+                <input type="email"
+                id="Email" 
+                placeholder="Email"
+                class="inputinput-emailc">
+            
+                <input type="password"
+                id="Contraseña" 
+                placeholder="Contraseña"
+                class="inputinput-contraseñac">
+                        
+                <input type="password"
+                id="ConfirmaContraseña" 
+                placeholder="Confirma Contraseña"
+                class="inputinput-confirmacontraseñac">
+
+            </form>
+            </div>
+    </div>
+</body>
+</html>

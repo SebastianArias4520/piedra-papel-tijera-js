@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <title> Información - Donaciones </title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --red: #FF4343;
+            --cian: #00FFD1;
+            --pple: #BD00FF;
+            --orange: #EB9938;
+            --lime: #9CEB38;
+            --darkyellow: #FFC700;
+            --sky: #00E0FF;
+            --fpink: #FF00D6;
+            --lightyellow: #FFD600;
+            --redfond: #FF3E4A;
+            --yellowborder: #FAFF00;
+            --greenfond: #BEFF54;
+            --yellowborder2: #FFD058;
+            --purplefond: #F36FFF;
+            --skyborder: #00C2FF;
+            --lightbluefond: #ECF6F8;
+            --darkpurplefond: #6F9FFC;
+            --purpleborder: #AC58FF;
+            --greenfond: #33FF00;
+            --greenborder: #7AFF58;
+            --lightyellowfond: #FCD46F;
+            --pinkborder: #FF58D0;
+            --cianfond: #C5FFF4;
+            --lightpurpleborder: #A2AFF3;
+            --slightgreenfond: #ECFFF1;
+            --slightyellowfond: #FFFBEC;
+            --slightvibrantgreenfond: #D4FBCB;
+            --slightvibrantyellowfond: #FFF2D9;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --btt: 36px;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Fredoka One', cursive;
+            margin: 0;
+        }
+
+        .logo {
+            position: absolute;
+            width: 271px;
+            height: 101px;
+            left: 15px;
+            top: 15px;
+        }
+
+        .Instagram {
+            position: absolute;
+            width: 79px;
+            height: 74px;
+            left: 1235px;
+            top: 28px;
+        }
+
+        .Facebook {
+            position: absolute;
+            width: 68px;
+            height: 65px;
+            left: 1330px;
+            top: 27px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Twitter {
+            position: absolute;
+            width: 98px;
+            height: 89px;
+            left: 1400px;
+            top: 17px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .red {
+            position: absolute;
+            width: 147.2px;
+            height: 71px;
+            left: 368px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--red);
+            border-color: var(--red);
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+            border-radius: 30px;
+        }
+
+        .cian {
+            position: absolute;
+            width: 299px;
+            height: 71px;
+            left: 580px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--cian);
+            border-color: var(--cian);
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+        }
+
+        .pple {
+            position: absolute;
+            width: 299px;
+            height: 71px;
+            left: 900px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--pple);
+            border-color: var(--pple);
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+        }
+
+        .bluefond {
+            position: absolute;
+            width: 100%;
+            height: 590px;
+            left: 0px;
+            top: 150px;
+            background: #ECF6F8;
+            border-radius: 50px;
+        }
+
+        .girldesk {
+            position: absolute;
+            width: 550px;
+            height: 430px;
+            
+            left: -50px;
+            top: 230px;
+            background: url(img4.png);
+        }
+
+        .coberturafond {
+            position: absolute;
+            width: 450px;
+            height: 230px;
+            left: 850px;
+            top: 187px;
+            background: rgba(111, 159, 252, 0.26);
+
+        }
+
+        .cobertura {
+            position: absolute;
+            width: 658px;
+            height: 63px;
+            left: 960px;
+            top: 190px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 54px;
+            color: #703FA0;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .pcobertura {
+            position: absolute;
+            width: 400px;
+            height: 100px;
+            left: 873px;
+            top: 260px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: rgba(80, 71, 181, 0.72);
+        }
+
+        .comolohacemosfond {
+            position: absolute;
+            width: 450px;
+            height: 200px;
+            left: 853px;
+            top: 430px;
+            background: rgba(51, 255, 0, 0.16);
+
+        }
+
+        .comolohacemos {
+            position: absolute;
+            width: 870px;
+            height: 47px;
+            left: 900px;
+            top: 430px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 54px;
+            color: #527C28;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .pcomolohacemos {
+            position: absolute;
+            width: 400px;
+            height: 100px;
+            left: 873px;
+            top: 500px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #38933B;
+        }
+
+        .dondedonarfond {
+            box-sizing: border-box;
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            left: 430px;
+            top: 215px;
+            background: #C5FFF4;
+        }
+
+        .dondedonar {
+            position: absolute;
+            width: 431px;
+            height: 60px;
+            left: 480px;
+            top: 200px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 54px;
+            color: #007585;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .pdondedonar {
+            position: absolute;
+            width: 350px;
+            height: 100px;
+            left: 450px;
+            top: 270px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #387D93;
+        }
+
+        .objetivofond {
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            left: 430px;
+            top: 430px;
+            background: rgba(252, 212, 111, 0.33);
+        }
+
+        .objetivo {
+            position: absolute;
+            width: 219px;
+            height: 81px;
+            left: 550px;
+            top: 430px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 54px;
+            color: #A03F97;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .pobjetivo {
+            position: absolute;
+            width: 379px;
+            height: 207px;
+            left: 442px;
+            top: 500px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: rgba(181, 71, 163, 0.88);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/html/Inicio.html">
+        <img src="./Logotipo Chiquiskillpng.png" alt="logo" class="logo">
+    </a>
+
+    <a href="/html/Inicio.html" class="red">Inicio</a>
+
+    <a href="/html/Sobrenosotros.html" class="cian">Sobre Nosotros</a>
+
+    <a href="/html/Donaciones.html" class="pple">Donaciones</a>
+
+
+    <img src="./Instagram.png" alt="Instagram" class="Instagram">
+    <img src="./Facebook.png" alt="Facebook" class="Facebook">
+    <img src="./twitter.png" alt="Twitter" class="Twitter">
+
+    <rectangle class="bluefond"></rectangle>
+
+    <div class="textcontainer">
+        <img src="./img4.png" alt="girldesk" class="girldesk">
+
+        <img src="./coberturafond.jpg" alt="coberturafond" class="coberturafond">
+
+        <h1 class="cobertura"> Cobertura </h1>
+        <p class="pcobertura"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem totam quos
+            ipsum, ut atque porro error velit exercitationem accu.</p>
+
+        <img src="./comolohacemosfond.jpg" alt="comolohacemosfond" class="comolohacemosfond">
+
+        <h1 class="comolohacemos"> ¿Cómo lo hacemos? </h1>
+        <p class="pcomolohacemos"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem totam quos
+            ipsum, ut atque porro error velit exercitationem accu.</p>
+
+        <img src="./dondedonarfond.jpg" alt="dondedonarfond" class="dondedonarfond">
+
+        <h1 class="dondedonar"> ¿Dónde donar? </h1>
+        <p class="pdondedonar"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem totam quos
+            ipsum, ut atque porro error velit exercitationem accu.</p>
+
+        <img src="./objetivofond.jpg" alt="objetivofond" class="objetivofond">
+
+        <h1 class="objetivo"> Objetivo </h1>
+        <p class="pobjetivo"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem totam quos
+            ipsum, ut atque porro error velit exercitationem accu.</p>
+    </div>
+
+    </head>
+</body>
+
+</html>

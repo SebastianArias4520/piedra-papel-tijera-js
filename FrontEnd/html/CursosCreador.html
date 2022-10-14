@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <title> Avance Cursos Creador</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --red: #FF4343;
+            --cian: #00FFD1;
+            --pple: #BD00FF;
+            --orange: #EB9938;
+            --lime: #9CEB38;
+            --darkyellow: #FFC700;
+            --sky: #00E0FF;
+            --fpink: #FF00D6;
+            --lightyellow: #FFD600;
+            --redfond: #FF3E4A;
+            --yellowborder: #FAFF00;
+            --greenfond: #BEFF54;
+            --yellowborder2: #FFD058;
+            --purplefond: #F36FFF;
+            --skyborder: #00C2FF;
+            --lightbluefond: #ECF6F8;
+            --darkpurplefond: #6F9FFC;
+            --purpleborder: #AC58FF;
+            --greenfond: #33FF00;
+            --greenborder: #7AFF58;
+            --lightyellowfond: #FCD46F;
+            --pinkborder: #FF58D0;
+            --cianfond: #C5FFF4;
+            --lightpurpleborder: #A2AFF3;
+            --slightgreenfond: #ECFFF1;
+            --slightyellowfond: #FFFBEC;
+            --slightvibrantgreenfond: #D4FBCB;
+            --slightvibrantyellowfond: #FFF2D9;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --btt: 36px;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Fredoka One', cursive;
+            margin: 0;
+        }
+
+        .logo {
+            position: absolute;
+            width: 320px;
+            height: 121px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .YellowdHeader {
+            position: absolute;
+            width: 100%;
+            height: 120px;
+            left: 0px;
+            top: 1px;
+            background: rgba(255, 199, 0, 0.39);
+            z-index: -1;
+        }
+
+        .HolaCreadorco {
+            position: absolute;
+            width: 600px;
+            height: 10px;
+            left: 420px;
+            top: 0px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 45px;
+            line-height: 73px;
+            color: #fca80b;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            letter-spacing: 3px;
+        }
+
+        .Miscursosco {
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400px;
+            font-size: 35px;
+            line-height: 71px;
+            text-align: center;
+            color: #2438F4;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: absolute;
+            width: 300px;
+            height: 67px;
+            left: 920px;
+            top: 29px;
+            background: #FFC700;
+            border-radius: 30px;
+            border: 3px solid #FFC700;
+        }
+
+        .sent {
+            position: absolute;
+            width: 78px;
+            height: 67px;
+            left: 1285px;
+            top: 29px;
+        }
+
+        .Fsentco {
+            position: absolute;
+            width: 80px;
+            height: 67px;
+            left: 1278px;
+            top: 31px;
+            z-index: -1;
+        }
+
+        .Sentco {
+            position: absolute;
+            width: 43px;
+            height: 44px;
+            left: 1296px;
+            top: 40px;
+        }
+
+        .MisCursos {
+            position: absolute;
+            width: 800;
+            height: 68px;
+            left: 25%;
+            top: 130px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height:normal;
+            text-align: justify;
+            color: #C224F9;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Separador {
+            position: absolute;
+            width: 1211px;
+            height: 0px;
+            left: 124px;
+            top: 240px;
+            border: 4px solid #51B9C8;
+        }
+
+        .Gimnasia {
+            position: absolute;
+            width: 294px;
+            height: 73px;
+            left: 617px;
+            top: 215px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 73px;
+            color: #51BAC8;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Playcurso {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            left: 350px;
+            top: 350px;
+            border: 4px solid #1EF3CD;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 30px;
+        }
+
+        .Playest {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            left: 350px;
+            top: 350px;
+            z-index: -1;
+        }
+
+        .Pcurso {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 750px;
+            top: 345px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 41px;
+            text-align: center;
+            color: rgba(177, 171, 171, 0.89);
+        }
+
+        .Módulosest {
+            position: absolute;
+            width: 246px;
+            height: 73px;
+            left: 400px;
+            top: 590px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 73px;
+            color: #51BAC8;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Fondoone {
+            position: absolute;
+            width: 63px;
+            height: 58px;
+            left: 300px;
+            top: 690px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Introducción {
+            position: absolute;
+            width: 193px;
+            height: 39px;
+            left: 400px;
+            top: 670px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #BD00FF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Fondotwo {
+            position: absolute;
+            width: 63px;
+            height: 58px;
+            left: 300px;
+            top: 750px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Calentamiento {
+            position: absolute;
+            width: 193px;
+            height: 39px;
+            left: 400px;
+            top: 730px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #BD00FF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Fondotree {
+            position: absolute;
+            width: 63px;
+            height: 58px;
+            left: 300px;
+            top: 815px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Primerosmovimientos {
+            position: absolute;
+            width: 193px;
+            height: 39px;
+            left: 400px;
+            top: 795px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #BD00FF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Iconogimnasiac {
+            position: absolute;
+            width: 198px;
+            height: 326px;
+            left: 850px;
+            top: 620px;
+        }
+
+        .Separador2 {
+            position: absolute;
+            width: 1211px;
+            height: 0px;
+            left: 124px;
+            top: 980px;
+            border: 4px solid #51B9C8;
+
+        }
+
+        .Cocina {
+            position: absolute;
+            width: 294px;
+            height: 73px;
+            left: 617px;
+            top: 970px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 73px;
+            color: #51BAC8;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Playcocina {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            left: 350px;
+            top: 1100px;
+            border: 4px solid #1EF3CD;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 30px;
+        }
+
+        .Playcoc {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            left: 350px;
+            top: 1100px;
+            z-index: -1;
+        }
+
+        .Pcocina {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 750px;
+            top: 1100px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 41px;
+            text-align: center;
+            color: rgba(177, 171, 171, 0.89);
+        }
+
+        .Móduloscoc {
+            position: absolute;
+            width: 246px;
+            height: 73px;
+            left: 400px;
+            top: 1330px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 73px;
+            color: #51BAC8;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        }
+
+        .Fondooneco {
+            position: absolute;
+            width: 63px;
+            height: 58px;
+            left: 300px;
+            top: 1430px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Introducciónco {
+            position: absolute;
+            width: 193px;
+            height: 39px;
+            left: 400px;
+            top: 1410px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #BD00FF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Fondotwoco {
+            position: absolute;
+            width: 63px;
+            height: 58px;
+            left: 300px;
+            top: 1490px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Utensilios {
+            position: absolute;
+            width: 193px;
+            height: 39px;
+            left: 400px;
+            top: 1460px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #BD00FF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Fondotreeco {
+            position: absolute;
+            width: 63px;
+            height: 58px;
+            left: 300px;
+            top: 1580px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Primereceta {
+            position: absolute;
+            width: 193px;
+            height: 39px;
+            left: 400px;
+            top: 1550px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #BD00FF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Cocinaico {
+            position: absolute;
+            width: 198px;
+            height: 250px;
+            left: 850px;
+            top: 1400px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header-container">
+        <a href="/html/Inicio.html">
+            <img src="./Logotipo Chiquiskillpng.png" alt="logo" class="logo">
+        </a>
+
+        <rectangle class="YellowdHeader"></rectangle>
+
+        <h1 class="HolaCreadorco"> ¡HOLA! Creador </h1>
+
+        <a href="#" class="Miscursosco">Mis Cursos</a>
+
+
+        <img src="./Fondosend.png" alt="Fsentco" class="Fsentco">
+
+        <a href="/html/SubirCursoC.html" >
+        <img src="./sendblanco.png" alt="Sentco" class="Sentco">
+        </a>
+        <h2 class="MisCursos"> Vista de todos los cursos que has subido </h2>
+
+        <line class="Separador"></line>
+
+        <h2 class="Gimnasia"> GIMNASIA </h2>
+
+        <rectangle class="Playcurso"></rectangle>
+
+        <img src="./Play.png" alt="Playest" class="Playest">
+
+        <p class="Pcurso"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat </p>
+
+        <h2 class="Módulosest"> Módulos </h2>
+
+        <img src="./1fond.png" alt="Fondoone" class="Fondoone">
+
+        <h3 class="Introducción"> Introducción </h3>
+
+        <img src="./2fond.png" alt="Fondotwo" class="Fondotwo">
+
+        <h3 class="Calentamiento"> Calentamiento </h3>
+
+        <img src="./3fond.png" alt="Fondotree" class="Fondotree">
+
+        <h3 class="Primerosmovimientos"> Primeros movimientos </h3>
+
+        <img src="./iconogimnasia.png" alt="Iconogimnasiac" class="Iconogimnasiac">
+
+        <line class="Separador2"></line>
+
+        <h2 class="Cocina"> COCINA </h2>
+
+        <rectangle class="Playcocina"></rectangle>
+
+        <img src="./Play.png" alt="Playcoc" class="Playcoc">
+
+        <p class="Pcocina"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat </p>
+
+        <h2 class="Móduloscoc"> Módulos </h2>
+
+        <img src="./1fond.png" alt="Fondooneco" class="Fondooneco">
+
+        <h3 class="Introducciónco"> Introducción </h3>
+
+        <img src="./2fond.png" alt="Fondotwoco" class="Fondotwoco">
+
+        <h3 class="Utensilios"> Utensilios Básicos </h3>
+
+        <img src="./3fond.png" alt="Fondotreeco" class="Fondotreeco">
+
+        <h3 class="Primereceta"> Tu Primer Receta </h3>
+
+        <img src="./iconococina.png" alt="Cocinaico" class="Cocinaico">
+
+</body>
+
+</html>

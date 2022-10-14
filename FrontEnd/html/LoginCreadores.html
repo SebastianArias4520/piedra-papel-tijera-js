@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <title> Iniciar Sesión Creadores </title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --red: #FF4343;
+            --cian: #00FFD1;
+            --pple: #BD00FF;
+            --orange: #EB9938;
+            --lime: #9CEB38;
+            --darkyellow: #FFC700;
+            --sky: #00E0FF;
+            --fpink: #FF00D6;
+            --lightyellow: #FFD600;
+            --redfond: #FF3E4A;
+            --yellowborder: #FAFF00;
+            --greenfond: #BEFF54;
+            --yellowborder2: #FFD058;
+            --purplefond: #F36FFF;
+            --skyborder: #00C2FF;
+            --lightbluefond: #ECF6F8;
+            --darkpurplefond: #6F9FFC;
+            --purpleborder: #AC58FF;
+            --greenfond: #33FF00;
+            --greenborder: #7AFF58;
+            --lightyellowfond: #FCD46F;
+            --pinkborder: #FF58D0;
+            --cianfond: #C5FFF4;
+            --lightpurpleborder: #A2AFF3;
+            --slightgreenfond: #ECFFF1;
+            --slightyellowfond: #FFFBEC;
+            --slightvibrantgreenfond: #D4FBCB;
+            --slightvibrantyellowfond: #FFF2D9;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --btt: 36px;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Fredoka One', cursive;
+            margin: 0;
+        }
+
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 200px;
+        }
+
+        .logo {
+            position: absolute;
+            width: 271px;
+            height: 101px;
+            left: 15px;
+            top: 15px;
+        }
+
+        .Instagram {
+            position: absolute;
+            width: 79px;
+            height: 74px;
+            left: 1235px;
+            top: 28px;
+        }
+
+        .Facebook {
+            position: absolute;
+            width: 68px;
+            height: 65px;
+            left: 1330px;
+            top: 27px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .Twitter {
+            position: absolute;
+            width: 98px;
+            height: 89px;
+            left: 1400px;
+            top: 17px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .red {
+            position: absolute;
+            width: 147.2px;
+            height: 71px;
+            left: 368px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--red);
+            border-color: var(--red);
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+            border-radius: 30px;
+        }
+
+        .cian {
+            position: absolute;
+            width: 299px;
+            height: 71px;
+            left: 580px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--cian);
+            border-color: var(--cian);
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+        }
+
+        .pple {
+            position: absolute;
+            width: 299px;
+            height: 71px;
+            left: 900px;
+            top: 31px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background-color: var(--pple);
+            border-color: var(--pple);
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 71px;
+        }
+
+        .titlerecre {
+            position: absolute;
+            width: 422px;
+            height: 73px;
+            left: 83px;
+            top: 110px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 73px;
+            color: #FF00D6;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .Creadorregistro {
+            position: absolute;
+            width: 710px;
+            height: 500px;
+            left: -90px;
+            top: 200px;
+        }
+
+        .Backformre {
+            position: absolute;
+            width: 500px;
+            height: 350px;
+            left: 650px;
+            top: 170px;
+            background: #FFF2D9;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+        }
+
+        .IniciarSesióncre {
+            position: absolute;
+            width: 379px;
+            height: 73px;
+            left: 755px;
+            top: 145px;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 73px;
+            color: #FFC700;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .inputinput-correocre {
+            box-sizing: border-box;
+            position: absolute;
+            width: 380px;
+            height: 67px;
+            left: 710px;
+            top: 280px;
+            background: #FFFBEC;
+            border: 3px solid #FFC700;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 41px;
+            padding-left: 10px;
+        }
+
+        .inputinput-contraseñacre {
+            box-sizing: border-box;
+            position: absolute;
+            width: 380px;
+            height: 67px;
+            left: 710px;
+            top: 370px;
+            background: #FFFBEC;
+            border: 3px solid #FFC700;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 41px;
+            padding-left: 10px;
+        }
+
+        .fpink {
+            box-sizing: border-box;
+            position: absolute;
+            width: 150px;
+            height: 43px;
+            left: 980px;
+            top: 460px;
+            background: #fdbb41;
+            border-radius: 30px;
+            border: 3px solid #ffa602;
+            position: absolute;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 35px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .skycre {
+            box-sizing: border-box;
+            position: absolute;
+            width: 299px;
+            height: 71px;
+            left: 760px;
+            top: 540px;
+            background: #00E0FF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            border: 3px solid #00E0FF;
+            position: absolute;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 71px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .footercre {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            left: 0px;
+            top: 650px;
+            background: #FFC700;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="/html/Inicio.html">
+        <img src="./Logotipo Chiquiskillpng.png" alt="logo" class="logo">
+    </a>
+
+    <a href="/html/Inicio.html" class="red">Inicio</a>
+    <a href="/html/Sobrenosotros.html" class="cian">Sobre Nosotros</a>
+    <a href="/html/Donaciones.html" class="pple">Donaciones</a>
+
+    <img src="./Instagram.png" alt="Instagram" class="Instagram">
+    <img src="./Facebook.png" alt="Facebook" class="Facebook">
+    <img src="./twitter.png" alt="Twitter" class="Twitter">
+
+    <h1 class="titlerecre"> CREADORES </h1>
+
+    <img src="./img6.png" alt="Creadorregistro" class="Creadorregistro">
+
+    <rectangle class="Backformre"></rectangle>
+
+    <h2 class="IniciarSesióncre"> Iniciar Sesión </h2>
+
+    <div class="iniciarsesioncre">
+        <div class="form-containercre">
+            <form action="/" class="formcre">
+                <input type="email" id="Correo" placeholder="Correo" class="inputinput-correocre">
+
+                <input type="password" id="Contraseña" placeholder="Contraseña" class="inputinput-contraseñacre">
+            </form>
+
+            <a href="/html/CursosCreador.html" class="fpink">Ingresar</a>
+            <a href="/html/RegistroCreadores.html" class="skycre">Registrarse</a>
+
+            <rectangle class="footercre"></rectangle>
+
+</body>
+
+</html>
