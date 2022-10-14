@@ -1,6 +1,6 @@
 class Entidad {
 
-    url = "https://chiquiskillbackend.herokuapp.com//api/";
+    url = "https://chiquiskillbackend.herokuapp.com/api/";
 
     constructor(endpoint) {
         this.endpoint = endpoint;
