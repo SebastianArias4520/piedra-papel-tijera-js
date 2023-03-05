@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/minecraft-logo--v2.png">
+	<title>Juega piedra papel o tijera</title>
+	<script defer src="script.js"></script> 
+	<!-- "defer" hacer que la descargar del script se haga en paralelo, pero la ejecucion se haga despues de cargar el HTML -->
+</head>
+
+<body>
+	<!-- Bienvenida y explicación -->
+	<header>
+		<img src="https://img.icons8.com/color/48/000000/minecraft-logo--v2.png" alt="ICONO PAGINA">
+	</header>
+	<section id="introduction">
+		<div class="welcome">
+			<h1> 
+				Piedra, Papel o Tijera</h1>
+			<h4>¡Para cualquier decisión!</h4>
+		</div>
+		<div class="explanation">
+			<p id="abstract">El jugador elige entre piedra ✊ papel ✋ o tijera ✌ y compite contra la maquina</p><br>
+			<p class="inicial-text">Buena suerte!! 🏆</p><br>
+		</div>
+	</section>
+
+	<!-- Jugador 1 -->
+	<section id="playone">
+		<p> Selecciona tu ataque:</p>
+		<!-- <input class="playone-button-choice" type="number" max="5" min="1"></input> -->
+		<div class="elections">
+			<input type="radio" class="button-choice" id="piedra" name="opciones" />
+			<label for="piedra"> <img src="/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
+
+			<input type="radio" class="button-choice" id="papel" name="opciones" />
+			<label for="papel"> <img src="/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
+
+			<input type="radio" class="button-choice" id="tijera" name="opciones" />
+			<label for="tijera"> <img src="/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
+		</div>
+	</section>
+	<section>
+		<button id="button-combat"><strong>Empezar</strong> </button>
+	</section>
+	<!-- Jugador PC 
+	<section id="playpc"></section> -->
+
+	<!-- Resultado de la jugada -->
+	<section id="conclusion">
+		<!-- La maquina sacó ... y tu sacaste ... Perdiste -->
+		<p> <span id="complete-result-fight">...</span> </p>
+	</section>
+
+	<!-- Resumen actual del juego y reiniciar-->
+	<section id="information">
+		<div class="data"> <strong>Victorias</strong> <br> <span id="wins">0</span></div>
+		<div class="data"> <strong>Empates</strong> <br> <span id="drafts">0</span></div>
+		<div class="data"> <strong>Derrotas</strong> <br> <span id="loses">0</span></div>
+		<div class="data"> <strong>Forze Strong</strong> <br> <span>0</span>%</div>
+		<button class="button-restart"> <strong>Reiniciar</strong> </button>
+	</section>
+</body>
+<!-- <footer>
+	<p>Copyrigth 2023 Sebastian Arias ©</p>
+</footer> -->
+</html>
