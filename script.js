@@ -1,35 +1,47 @@
+const d = document
+
 let startCombatButton = document.getElementById('button-combat')
 startCombatButton.addEventListener('click', startCombat)
+
+let inputRestart=document.getElementById('button-restart')
+inputRestart.addEventListener('click', resetGame)
 
 //Estas variables son definidas globalmente por lo tanto pueden ser utilizadas en cualquier función
 let attackPC
 let attackPlayer
+let result
+let wins = 0,loses = 0,drafts = 0
+var msgWins = d.getElementById('wins')
+var msgLoses = d.getElementById('loses')
+var msgDrafts = d.getElementById('drafts')
 
-function startCombat(){
+function resetGame(){
+    //Reseteamos los contadores 
+    wins = 0
+    loses = 0
+    drafts = 0
+    msgWins.innerHTML = wins
+    msgDrafts.innerHTML = drafts
+    msgLoses.innerHTML = loses
+}
+
+function startCombat(){ 
 
     //Primero el jugador elige su jugada, donde devuelve un numero del 0 al 3
     electionPlayer();
     
-    //Si el numero es diferente de 0, osea que eligió cualquier oattackPCion se ejecuta el demás código
+    //Condiciona el inicio, si el numero es diferente de 0, el resto del codigo se ejecuta
     if (attackPlayer != 0) {
         electionPC();
-        resultInformation(attackPC,attackPlayer);
-        combat(attackPC,attackPlayer)
     }
 
+    //En JS normalmente podemos usar las funciones antes de crearlas
+    //Ya que el codigo no se lee de arriba hacia abajo como en HTML
 
-
-    //En JS normalmente podemos usar las funciones antes de 
-    //Ya qe el codigo no se lee de arriba hacia como en HTML
-
-    function electionPC() {
-        //Computador nos da un numero entre 1 y 3 (Piedra,Papel,Tijera)
-        attackPC= Math.floor(Math.random() * (3) + 1)
-    }
-    function electionPlayer(){
-        let inputPiedra=document.getElementById('piedra');
-        let inputPapel=document.getElementById('papel');
-        let inputTijera=document.getElementById('tijera');
+    function electionPlayer(){ 
+        let inputPiedra=d.getElementById('piedra');
+        let inputPapel=d.getElementById('papel');
+        let inputTijera=d.getElementById('tijera');
         //Conocer cual de las tres opciones seleccionó el attackPlayer a través del método "checked"
         if (inputPiedra.checked) {
             attackPlayer=1
@@ -42,7 +54,36 @@ function startCombat(){
             attackPlayer=0
         }
     }
-    function resultInformation() {
+    function electionPC() {
+        //Computador nos da un numero entre 1 y 3 (Piedra,Papel,Tijera)
+        attackPC= Math.floor(Math.random() * (3) + 1)
+        combat();
+    }
+    function combat(){
+        //Se utiliza un algoritmo inteligente para resumir los if 
+        //Recibimos el resultado como un string
+        //Aumentamos el contador de victorias/empates/derrotas
+        if (attackPlayer == attackPC) {
+            result = 'EMPATE'
+            drafts++
+            msgDrafts.innerHTML = drafts
+        } else if ((attackPlayer - attackPC) == 1) {
+            result = 'GANASTE'
+            wins++
+            msgWins.innerHTML = wins
+        } else if ((attackPlayer - attackPC) == -2) {
+            result = 'GANASTE'
+            wins++
+            msgWins.innerHTML = wins
+        } else {
+            result = 'PERDISTE'
+            loses++
+            msgLoses.innerHTML = loses
+        }
+        elections();
+    }
+    function elections() {
+        //Convertimos la elección en un string para mostrarlo mas adelante en pantalla
         switch (attackPC) {
             case 1:
                 attackPC='Piedra ✊'
@@ -65,26 +106,24 @@ function startCombat(){
                 attackPlayer='Tijera ✌'
                 break;
         }
-        document.getElementById('complete-result-fight').innerHTML = 'La maquina eligió ' + attackPC + ' y tu sacaste ' + attackPlayer 
+        resultMessage();
     }
-    function combat(){
-        //Se utiliza un algoritmo inteligente para resumir los if
-        if (attackPlayer == attackPC) {
-            alert('EMPATE')
-            document.getElementById('drafts').innerHTML = +1
-        } else if ((attackPlayer - attackPC) == 1) {
-            alert('GANASTE')
-            document.getElementById('wins').innerHTML = +1
-        } else if ((attackPlayer - attackPC) == -2) {
-            alert('GANASTE')
-            document.getElementById('wins').innerHTML = +1
-        } else {
-            alert('PERDISTE')
-            document.getElementById('loses').innerHTML = +1
-        }
-        
+    function resultMessage(){
+        d.getElementById('result-combat').innerHTML = result + '. La maquina eligió ' + attackPC + ' y tu sacaste ' + attackPlayer
     }
 
+
+//IDEA DE SIDE BAR PENDIENTE
+    // function listMessages(){
+    //     let resultmsg = document.getElementById('results-table').insertRow(1);
+    //     let col1 = resultmsg.insertCell(0);
+    //     let col2 = resultmsg.insertCell(1);
+    //     let col3 = resultmsg.insertCell(2);
+        
+    //     col1.innerHTML = attackPlayer
+    //     col2.innerHTML = attackPC
+    //     col3.innerHTML = result
+    // }
 }
 
 
