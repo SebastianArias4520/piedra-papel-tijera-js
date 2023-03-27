@@ -1,11 +1,34 @@
+:root{
+    --nacionalgreen: rgba(8, 68, 5, 0.726);
+    --box-shadow: 0 3px 6px 3px rgba(20,420,1,.1);
+}
+
 * {
     font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    ;
+    /* font-family: 'VT323', monospace; */
+    font-weight: 0;
     color: white;
     margin: 0;
     padding: 0;
 }
 
+header {
+    background-image: url(./imgs/fondo_piedra.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header img {
+    backdrop-filter: blur(10px);
+}
+
+header img:hover {
+    transform: scale(1.08);
+}
+
+.logo {
+    opacity: .5;
+}
 
 body {
     width: 100%;
@@ -34,18 +57,21 @@ img {
 
 #introduction {
     width: 100%;
-    background-color: rgba(8, 68, 5, 0.726);
-    /* background-image: url(/imgs/fondomc.jpg); */
+    background-color: var(--nacionalgreen);
+
 }
+
 .welcome {
     padding: 1em 0;
 }
+
 h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 34px;
     font-weight: 900;
     letter-spacing: 2px;
+    text-shadow: 2px 3px 8px #f8f8f87a;
 }
 
 h4 {
@@ -65,7 +91,6 @@ h4 {
 
 #playone {
     margin: 20px;
-    padding: 10px;
 }
 
 #playone p {
@@ -78,7 +103,6 @@ h4 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .elections img {
@@ -88,7 +112,7 @@ h4 {
 }
 
 label {
-    border: rgba(8, 119, 4, 0.507);
+    border: rgba(8, 119, 4, 0.74);
     background-color: #0877040e;
     border-style: solid;
     border-radius: 5px;
@@ -98,7 +122,7 @@ label {
     margin: 1em 1em;
     transition: all 0.3s ease;
     width: 7em;
-
+    box-shadow: var(--box-shadow);
 }
 
 label:hover {
@@ -123,6 +147,8 @@ input[type="radio"]:checked+label {
     margin-bottom: 3%;
     border-style: none;
     border-radius: 10px;
+    cursor: pointer;
+
 }
 
 #button-combat:hover {
@@ -148,7 +174,7 @@ input[type="radio"]:checked+label {
 }
 
 #information {
-    width: 90%;
+    width: 64%;
     margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
@@ -175,6 +201,7 @@ input[type="radio"]:checked+label {
     max-height: 90px;
     border-style: initial;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #button-restart:hover {
@@ -199,13 +226,18 @@ input[type="radio"]:checked+label {
     }
 }
 
-/* footer{
-    background-color: #45c53f70;
-    margin: 1em 0 0;
-    font-size: x-small;
-    position:absolute;
-    bottom: 0;
+footer {
+    background-image: url(/imgs/fondo_piedra.png);
     width: 100%;
-    height: 30px;
-} */
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1em;
+}
 
+footer p {
+    font-size: small;
+    font-weight: 500;
+    padding-bottom: 4px;
+}
