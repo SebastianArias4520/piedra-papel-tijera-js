@@ -1,44 +1,48 @@
 :root{
-    --nacionalgreen: rgba(8, 68, 5, 0.726);
+    --nacionalgreen: #0844058e;
+    --postnacionalgreen: #084405b7;
     --box-shadow: 0 3px 6px 3px rgba(20,420,1,.1);
 }
 
 * {
-    font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Rowdies', cursive;
     /* font-family: 'VT323', monospace; */
     font-weight: 0;
     color: white;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
     background-image: url(./imgs/fondo_piedra.png);
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 3px 3px 15px 8px  #0f0f0f ;
 }
 
-header img {
-    backdrop-filter: blur(10px);
+button , .shadow {
+    box-shadow: 1px 1px 12px 5px  #0f0f0f ;
 }
 
 header img:hover {
+    /* background: url(/imgs/logoCambiante.gif); */
     transform: scale(1.08);
 }
 
-.logo {
-    opacity: .5;
-}
-
 body {
+    background-color: #161616;
     width: 100%;
+    min-height: 100vh;
     text-align: center;
-    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 body::-webkit-scrollbar {
     background-color: #0f0f0f;
-    width: 8px;
+    width: 0.2em;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -50,50 +54,146 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: #021b016b;
 }
 
-img {
-    margin: 2px 0;
-    size: 3em;
-}
 
 #introduction {
     width: 100%;
     background-color: var(--nacionalgreen);
-
+    box-shadow: 3px 3px 18px 6px  #0f0f0f ;
 }
 
-.welcome {
+#welcome {
     padding: 1em 0;
 }
 
 h1 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 34px;
-    font-weight: 900;
+    font-size: 40px;
     letter-spacing: 2px;
-    text-shadow: 2px 3px 8px #f8f8f87a;
+    text-shadow: 2px 2px 10px #f8f8f87a;
 }
 
-h4 {
-    font-style: italic;
+h3 {
     margin: 3px 0 10px 0;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
-#abstract {
-    margin: 0 3em;
-    padding: 20px 0 0;
-    font-size: 18px;
+
+#inicial-text {
+    margin: 0 auto;
+    padding: 0 60px;
+    font-size: 16px;
 }
 
-.inicial-text {
-    font-size: 14px;
+#first-window {
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    width: 90%;
+    margin: 30px auto;
+    font-size: large;
+    flex-wrap: wrap;
 }
 
-#playone {
+#players {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.player-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.names{
+    background: var(--nacionalgreen);
+    flex: 1 1 auto;
+    padding: 10px;
+    border-style: none;
+    height: 3em;
+    font-size: larger;
+}
+
+
+#rounds {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#rounds p{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+#number-rounds {
+    align-self: center;
+    width: 12em;
+}
+
+#range-value {
+    font-size: 24px;
+}
+
+.next-player{
+    background-color: var(--nacionalgreen);
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    font-size: x-large;
+    margin-top: 2em;
+    padding: 12px;
+}
+
+.next-player:hover {
+    background: var(--postnacionalgreen);
+}
+
+#button-configuration:active {
+    animation: button-configuration 0.75s;
+}
+
+@keyframes button-configuration {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#playone, #playtwo {
     margin: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#playone p {
+#name-player-1, #name-play-one {
+    color: #f5640c;
+}
+
+#name-player-2, #name-play-two {
+    color: cornflowerblue;
+}
+
+.text-elect {
     font-style: italic;
     font-size: 18px;
     margin: 0px 0 20px;
@@ -103,6 +203,7 @@ h4 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2em;
 }
 
 .elections img {
@@ -111,44 +212,88 @@ h4 {
     margin: 0 auto;
 }
 
-label {
-    border: rgba(8, 119, 4, 0.74);
+.elections label {
     background-color: #0877040e;
+    border: rgba(8, 119, 4, 0.74);
     border-style: solid;
+    border-width: 2px;
     border-radius: 5px;
-    font-size: 30px;
-    font-weight: 700;
-    padding: 8px 40px;
-    margin: 1em 1em;
-    transition: all 0.3s ease;
-    width: 7em;
     box-shadow: var(--box-shadow);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 6px 9px;
+    flex-grow: 2;
+    max-width: 10em;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-label:hover {
+.elections label:hover {
     background-color: #08770462;
 }
 
-input[type="radio"]:checked+label {
+input[type="radio"]:checked + label{
     background-color: #08770462;
 }
 
 .button-choice {
     appearance: none;
-    cursor: pointer;
-    flex: 3 1 1;
+    display: none;
+}
+
+#button-elect-one {
+}
+#button-elect-one:active {
+    animation: button-elect-one 0.75s;
+}
+@keyframes button-elect-one {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#button-elect-two {
+}
+#button-elect-two:active {
+    animation: button-elect-two 0.75s;
+}
+
+@keyframes button-elect-two {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#combat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
 }
 
 #button-combat {
     background-color: #f5640c;
-    font-size: 18px;
+    font-size: 30px;
     padding: 12px;
-    margin-top: 2%;
-    margin-bottom: 3%;
     border-style: none;
     border-radius: 10px;
     cursor: pointer;
-
 }
 
 #button-combat:hover {
@@ -156,7 +301,7 @@ input[type="radio"]:checked+label {
 }
 
 #button-combat:active {
-    animation: button-combat 0.5s;
+    animation: button-combat 1s;
 }
 
 @keyframes button-combat {
@@ -173,32 +318,44 @@ input[type="radio"]:checked+label {
     }
 }
 
+#conclusion {
+    margin: 1em auto;
+    flex-direction: column;
+    gap: 1em;
+}
+
 #information {
     width: 64%;
-    margin: 10px auto;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content: space-around;
     align-items: center;
-    gap: 1em 3.5em;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    gap: 4em;
 }
 
 .data {
     background-color: #043b026b;
-    padding: 0.6em 1em;
-    font-size: 18px;
-    flex: 1 2;
-    /*Si coloco 1 1 auto --> el auto es el flex-basis que acomoda el tamaño dependiendo de lo que contenga*/
-    max-width: 200px;
+    box-shadow: 1px 1px 18px 6px  #0f0f0f ;
+    margin: 0 auto;
+    padding: 26px 0;
+    font-size: 20px;
     border-radius: 18px;
+    flex: 1;
+    /*Si coloco 1 1 auto --> el auto es el flex-basis que acomoda el tamaño dependiendo de lo que contenga*/
+}
+
+#restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #button-restart {
     background-color: #b61c1cbe;
-    padding: 0 6px;
-    height: 3em;
-    font-size: 18px;
-    flex: 1 2;
-    max-height: 90px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
     border-style: initial;
     border-radius: 10px;
     cursor: pointer;
@@ -226,18 +383,39 @@ input[type="radio"]:checked+label {
     }
 }
 
+#replay {
+    margin: 32px auto;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-replay {
+    background-color: #08053ddc;
+    border-style:hidden;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 16px 12px;
+    font-size: 17px;
+    max-height: 60px;
+}
+
+#button-replay:hover{
+    
+}
+
 footer {
     background-image: url(/imgs/fondo_piedra.png);
     width: 100%;
-    height: 24px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 1em;
+    flex-wrap: wrap;
+    margin-top: auto;
 }
 
 footer p {
     font-size: small;
     font-weight: 500;
-    padding-bottom: 4px;
+    padding: 8px 10px;
 }

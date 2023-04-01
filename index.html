@@ -5,13 +5,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="/fonts/fonts_styles.css">
+	<link rel="stylesheet" href="style.css">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-	
 	<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/minecraft-logo--v2.png">
 	<title>Juega piedra papel o tijera</title>
 	<script defer src="script.js"></script> 
@@ -21,71 +17,108 @@
 <body>
 	<!-- Bienvenida y explicación -->
 	<header>
-		<img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/48/000000/minecraft-logo--v2.png" alt="ICONO PAGINA">
+		<img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/240/null/minecraft-logo--v2.png" alt="ICONO PAGINA" width="52px">
 	</header>
 	<section id="introduction">
-		<div class="welcome">
-			<h1> 
-				Piedra, Papel o Tijera</h1>
-			<h4>¡Para cualquier decisión!</h4>
+		<div id="welcome">
+			<h1> Piedra, Papel o Tijera</h1>
+			<h3 >¡Para cualquier decisión!</h3>
 		</div>
-		<div class="explanation">
-			<p id="abstract">El jugador elige entre piedra ✊ papel ✋ o tijera ✌ y compite contra la maquina</p><br>
-			<p class="inicial-text">Buena suerte!! 🏆</p><br>
+		<div id="explanation">
+			<!-- <p id="abstract">El jugador elige entre piedra ✊ papel ✋ o tijera ✌ y compite contra la maquina</p><br> -->
+			<p id="inicial-text">Este es un juego para dos personas 👥, cada uno elige su nombre y el numero de victorias al que quieren acabar la partida 🏁. Buena suerte 🍀 y que gane el mejor!! 🏆</p><br>
 		</div>
 	</section>
-
+	<!-- Cada jugador elige su nombre -->
+	<section id="first-window">
+		<section id="players">
+			<div class="player-name">
+				<img class="shadow" src="/imgs/head_steve.jpg" alt="Cabeza de Steve" width="80px" max-width="90px">
+				<p></p>
+				<input type="text" class="names" id="name-player-one" placeholder="Jugador 1">
+			</div>
+			<div class="player-name">
+				<img class="shadow" src="/imgs/head_enderman.png" alt="Cabeza de Enderman" width="80px" max-width="90px">
+				<p></p>
+				<input type="text" class="names" id="name-player-two" placeholder="Jugador 2">
+			</div>
+		</section>
+		<section id="rounds">
+			<p>Escoge el numero de victorias</p>
+			<input type="range" id="number-rounds" max="10" min="1" step="1" value="1">
+			<span id="range-value">1</span>
+			<button class="next-player" id="button-configuration">Siguiente</button>
+		</section>
+	</section>
 	<!-- Jugador 1 -->
 	<section id="playone">
-		<p> Selecciona tu ataque:</p>
+		<p class="text-elect"><span id="name-play-one" ></span> elige tu ataque</p>
 		<!-- <input class="playone-button-choice" type="number" max="5" min="1"></input> -->
 		<div class="elections">
-			<input type="radio" class="button-choice" id="piedra" name="opciones" />
-			<label for="piedra"> <img src="/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
+			<input type="radio" class="button-choice" id="piedra-one" name="opciones-one" />
+			<label for="piedra-one"> <img src="/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
 
-			<input type="radio" class="button-choice" id="papel" name="opciones" />
-			<label for="papel"> <img src="/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
+			<input type="radio" class="button-choice" id="papel-one" name="opciones-one" />
+			<label for="papel-one"> <img src="/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
 
-			<input type="radio" class="button-choice" id="tijera" name="opciones" />
-			<label for="tijera"> <img src="/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
+			<input type="radio" class="button-choice" id="tijera-one" name="opciones-one" />
+			<label for="tijera-one"> <img src="/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
 		</div>
+		<button class="next-player" id="button-elect-one">Siguiente</button>
 	</section>
-	<section>
-		<button id="button-combat"><strong>Empezar</strong> </button>
+	<!-- Jugador 2 -->
+	<section id="playtwo">
+		<p class="text-elect"><span id="name-play-two" ></span> elige tu ataque:</p>
+		<!-- <input class="playone-button-choice" type="number" max="5" min="1"></input> -->
+		<div class="elections">
+			<input type="radio" class="button-choice" id="piedra-two" name="opciones-two" />
+			<label for="piedra-two"> <img src="/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
+
+			<input type="radio" class="button-choice" id="papel-two" name="opciones-two" />
+			<label for="papel-two"> <img src="/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
+
+			<input type="radio" class="button-choice" id="tijera-two" name="opciones-two" />
+			<label for="tijera-two"> <img src="/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
+		</div>
+		<button class="next-player" id="button-elect-two">Siguiente</button>
+	</section>
+	<!-- Boton de combate -->
+	<section id="combat">
+		<button id="button-combat"><strong>Lucha</strong> </button>
+	</section>
+	<!-- Resumen actual del juego y reiniciar-->
+	<section id="information">
+		<div class="data"> 
+			<strong><span id="name-player-1"></span></strong>
+			<br>
+			<span id="wins-player-one">0</span>
+		</div>
+		<div class="data"> 
+			<strong>Empates</strong>
+			<br>
+			<span id="drafts">0</span>
+		</div>
+		<div class="data"> 
+			<strong><span id="name-player-2"></span></strong>
+			<br>
+			<span id="wins-player-two">0</span>
+		</div>
+		<!-- <div class="data"> <strong>Forze Strong</strong> <br> <span>0</span>%</div> -->
 	</section>
 	<!-- Resultado de la jugada -->
 	<section id="conclusion">
-		<p><span id="result-combat">...</span></p>
+		<p><span id="result-combat"></span></p>
+		<p>El total de victorias para ganar es <span id="total-rounds"></span></p>
+		<p>La ronda actual es <strong><span id="current-round"></span></strong></p>
 	</section>
-
-<!-- IDEA PENDIENTE SIDE BAR CON EL REGISTRO DE JUGADAS-->
-
-	<!-- <section id="container-sidebar">
-		<h2>REGISTRO DE JUGADAS</h2>
-		<button class="show-hide">
-			<img src="/imgs/icono-registro.png" alt="icono mostrar registro">
-		</button>
-		<div class="sidebar">
-			<table id="results-table">
-				<tr>
-					<th>TU</th>
-					<th>MAQUINA</th>
-					<th>RESULTADO </th>
-				</tr>
-			</table>
-		</div>
-	</section> -->
-
-	<!-- Resumen actual del juego y reiniciar-->
-	<section id="information">
-		<div class="data"> <strong>Victorias</strong> <br> <span id="wins">0</span></div>
-		<div class="data"> <strong>Empates</strong> <br> <span id="drafts">0</span></div>
-		<div class="data"> <strong>Derrotas</strong> <br> <span id="loses">0</span></div>
-		<!-- <div class="data"> <strong>Forze Strong</strong> <br> <span>0</span>%</div> -->
-		<button id="button-restart"> <strong>Reiniciar</strong> </button>
+	<section id="restart">
+		<button id="button-restart"><strong>Reiniciar</strong></button>
+	</section>
+	<section id="replay">
+		<button id="button-replay"><strong>Siguiente ronda</strong></button>
 	</section>
 </body>
 <footer>
-	<p>Platzi - Curso Básico de Programación - Sebastian Arias ©2023</p>
+	<p>Platzi - Curso Básico de Programación - Sebastian Arias &copy;2023</p>
 </footer>
 </html>
