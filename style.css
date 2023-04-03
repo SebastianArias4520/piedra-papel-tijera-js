@@ -14,22 +14,6 @@
     box-sizing: border-box;
 }
 
-header {
-    background-image: url(./imgs/fondo_piedra.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 3px 3px 15px 8px  #0f0f0f ;
-}
-
-button , .shadow {
-    box-shadow: 1px 1px 12px 5px  #0f0f0f ;
-}
-
-header img:hover {
-    /* background: url(/imgs/logoCambiante.gif); */
-    transform: scale(1.08);
-}
-
 body {
     background-color: #161616;
     width: 100%;
@@ -54,6 +38,38 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: #021b016b;
 }
 
+button, #first-window #players .player-name .shadow {
+    box-shadow: 1px 1px 12px 5px  #0f0f0f;
+    transition: 0.5s;
+}
+
+button:active {
+    animation: button-animation 0.5s;
+}
+
+@keyframes button-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+header {
+    background-image: url(./imgs/fondo_piedra.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 15px 8px  #0f0f0f ;
+}
+
+header img:hover {
+    /* background: url(/imgs/logoCambiante.gif); */
+    transform: scale(1.08);
+}
 
 #introduction {
     width: 100%;
@@ -61,11 +77,12 @@ body::-webkit-scrollbar-thumb:hover {
     box-shadow: 3px 3px 18px 6px  #0f0f0f ;
 }
 
-#welcome {
+#introduction #welcome {
     padding: 1em 0;
 }
 
-h1 {
+#introduction #welcome h1 {
+    margin: 0 10px;
     text-transform: uppercase;
     text-align: center;
     font-size: 40px;
@@ -73,31 +90,30 @@ h1 {
     text-shadow: 2px 2px 10px #f8f8f87a;
 }
 
-h3 {
+#introduction #welcome h3 {
     margin: 3px 0 10px 0;
     font-style: italic;
     letter-spacing: 1px;
 }
 
-
-#inicial-text {
+#explanation #inicial-text {
     margin: 0 auto;
     padding: 0 60px;
     font-size: 16px;
 }
 
 #first-window {
-    flex-grow: 2;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
     width: 90%;
     margin: 30px auto;
     font-size: large;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 3em;
 }
 
-#players {
+#first-window #players {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -107,7 +123,7 @@ h3 {
     gap: 1em;
 }
 
-.player-name {
+#first-window #players .player-name {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,34 +131,42 @@ h3 {
     gap: 1em;
 }
 
-.names{
+#first-window #players .player-name .names{
     background: var(--nacionalgreen);
-    flex: 1 1 auto;
-    padding: 10px;
-    border-style: none;
+    width: 50%;
     height: 3em;
+    flex: 1 1 auto;
+    padding-left: 10px;
+    border-style: none;
     font-size: larger;
+    transition: 0.5s;
 }
 
+#first-window #players .player-name .colors {
+    border-style: none;
+    background: none;
+    width: 3em;
+    height: 3em;
+}
 
-#rounds {
+#first-window #rounds {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0 auto;
 }
 
-#rounds p{
+#first-window #rounds p{
     margin-bottom: 10px;
     font-size: 25px;
 }
 
-#number-rounds {
+#first-window #rounds #number-rounds {
     align-self: center;
     width: 12em;
 }
 
-#range-value {
+#first-window #rounds #range-value {
     font-size: 24px;
 }
 
@@ -160,24 +184,6 @@ h3 {
     background: var(--postnacionalgreen);
 }
 
-#button-configuration:active {
-    animation: button-configuration 0.75s;
-}
-
-@keyframes button-configuration {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 #playone, #playtwo {
     margin: 20px;
     flex-direction: column;
@@ -185,19 +191,18 @@ h3 {
     align-items: center;
 }
 
-#name-player-1, #name-play-one {
-    color: #f5640c;
-}
-
-#name-player-2, #name-play-two {
-    color: cornflowerblue;
-}
-
 .text-elect {
     font-style: italic;
     font-size: 18px;
     margin: 0px 0 20px;
 }
+/* #playone .text-elect #name-play-one, #information .data #name-player-1 {
+    color: #f5640c;
+}
+
+#playtwo .text-elect #name-play-two, #information .data #name-player-2{
+    color: cornflowerblue;
+} */
 
 .elections {
     display: flex;
@@ -241,108 +246,57 @@ input[type="radio"]:checked + label{
     display: none;
 }
 
-#button-elect-one {
-}
-#button-elect-one:active {
-    animation: button-elect-one 0.75s;
-}
-@keyframes button-elect-one {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-#button-elect-two {
-}
-#button-elect-two:active {
-    animation: button-elect-two 0.75s;
-}
-
-@keyframes button-elect-two {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 #combat {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 2;
+    margin: 50px;
 }
 
-#button-combat {
+#combat #button-combat {
     background-color: #f5640c;
     font-size: 30px;
     padding: 12px;
     border-style: none;
     border-radius: 10px;
     cursor: pointer;
+    letter-spacing: 2px;
+
 }
 
-#button-combat:hover {
+#combat #button-combat:hover {
     background-color: #883908;
-}
-
-#button-combat:active {
-    animation: button-combat 1s;
-}
-
-@keyframes button-combat {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-#conclusion {
-    margin: 1em auto;
-    flex-direction: column;
-    gap: 1em;
 }
 
 #information {
     width: 64%;
-    margin: 20px auto;
-    justify-content: space-around;
+    margin: 30px auto 20px;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-grow: 3;
-    gap: 4em;
+    /* flex-grow: 2; */
+    gap: 2em ;
 }
 
-.data {
+#information .data {
     background-color: #043b026b;
     box-shadow: 1px 1px 18px 6px  #0f0f0f ;
     margin: 0 auto;
     padding: 26px 0;
     font-size: 20px;
     border-radius: 18px;
-    flex: 1;
+    flex-grow: 2;
+    flex-shrink: 1;
+    min-width: 150px;
+    letter-spacing: 1px;
     /*Si coloco 1 1 auto --> el auto es el flex-basis que acomoda el tamaño dependiendo de lo que contenga*/
+}
+
+#conclusion {
+    margin: 1em 1em;
+    flex-direction: column;
+    gap: 1em;
 }
 
 #restart {
@@ -351,7 +305,7 @@ input[type="radio"]:checked + label{
     align-items: center;
 }
 
-#button-restart {
+#restart #button-restart {
     background-color: #b61c1cbe;
     margin: 20px auto;
     padding: 10px 20px;
@@ -361,23 +315,21 @@ input[type="radio"]:checked + label{
     cursor: pointer;
 }
 
-#button-restart:hover {
+#restart #button-restart:hover {
     background-color: #8a050598;
 }
 
-#button-restart:active {
-    animation: button-restart 0.5s;
+#restart #button-restart:active {
+    animation: button-restart 1.5s;
 }
 
 @keyframes button-restart {
     0% {
         transform: scale(1);
     }
-
     50% {
-        transform: scale(1.1);
+        transform: scale(1.8);
     }
-
     100% {
         transform: scale(1);
     }
@@ -390,18 +342,19 @@ input[type="radio"]:checked + label{
     align-items: center;
 }
 
-#button-replay {
-    background-color: #08053ddc;
-    border-style:hidden;
+#replay #button-replay {
+    background-color: #0a065adc;
+    border-style: none;
     border-width: 1px;
     border-radius: 10px;
     padding: 16px 12px;
     font-size: 17px;
     max-height: 60px;
+    letter-spacing: 1px;
 }
 
-#button-replay:hover{
-    
+#replay #button-replay:hover{
+    background-color: #08053ddc;
 }
 
 footer {
@@ -414,7 +367,8 @@ footer {
     margin-top: auto;
 }
 
-footer p {
+footer a {
+    text-decoration: none;
     font-size: small;
     font-weight: 500;
     padding: 8px 10px;

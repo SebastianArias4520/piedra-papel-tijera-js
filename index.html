@@ -16,7 +16,7 @@
 <body>
 	<!-- Bienvenida y explicación -->
 	<header>
-		<img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/240/null/minecraft-logo--v2.png" alt="ICONO PAGINA" width="52px">
+		<a href="/index.html"><img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/240/null/minecraft-logo--v2.png" alt="ICONO PAGINA" width="52px"></a>
 	</header>
 	<section id="introduction">
 		<div id="welcome">
@@ -24,7 +24,6 @@
 			<h3 >¡Para cualquier decisión!</h3>
 		</div>
 		<div id="explanation">
-			<!-- <p id="abstract">El jugador elige entre piedra ✊ papel ✋ o tijera ✌ y compite contra la maquina</p><br> -->
 			<p id="inicial-text">Este es un juego para dos personas 👥, cada uno elige su nombre y el numero de victorias al que quieren acabar la partida 🏁. Buena suerte 🍀 y que gane el mejor!! 🏆</p><br>
 		</div>
 	</section>
@@ -32,14 +31,14 @@
 	<section id="first-window">
 		<section id="players">
 			<div class="player-name">
-				<img class="shadow" src="/imgs/head_steve.jpg" alt="Cabeza de Steve" width="80px" max-width="90px">
-				<p></p>
+				<img class="shadow" src="/imgs/head_steve.jpg" alt="Cabeza de Steve" width="70em" max-width="90px">
 				<input type="text" class="names" id="name-player-one" placeholder="Jugador 1">
+				<input type="color" id="color-player-one" class="shadow colors" value="#ff0000">
 			</div>
 			<div class="player-name">
-				<img class="shadow" src="/imgs/head_enderman.png" alt="Cabeza de Enderman" width="80px" max-width="90px">
-				<p></p>
+				<img class="shadow" src="/imgs/head_enderman.png" alt="Cabeza de Enderman" width="70em" max-width="90px">
 				<input type="text" class="names" id="name-player-two" placeholder="Jugador 2">
+				<input type="color" id="color-player-two" class="shadow colors" value="#000fff">
 			</div>
 		</section>
 		<section id="rounds">
@@ -52,7 +51,6 @@
 	<!-- Jugador 1 -->
 	<section id="playone">
 		<p class="text-elect"><span id="name-play-one" ></span> elige tu ataque</p>
-		<!-- <input class="playone-button-choice" type="number" max="5" min="1"></input> -->
 		<div class="elections">
 			<input type="radio" class="button-choice" id="piedra-one" name="opciones-one" />
 			<label for="piedra-one"> <img src="/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
@@ -68,7 +66,6 @@
 	<!-- Jugador 2 -->
 	<section id="playtwo">
 		<p class="text-elect"><span id="name-play-two" ></span> elige tu ataque:</p>
-		<!-- <input class="playone-button-choice" type="number" max="5" min="1"></input> -->
 		<div class="elections">
 			<input type="radio" class="button-choice" id="piedra-two" name="opciones-two" />
 			<label for="piedra-two"> <img src="/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
@@ -118,6 +115,6 @@
 	</section>
 </body>
 <footer>
-	<p>Platzi - Curso Básico de Programación - Sebastian Arias &copy;2023</p>
+	<a href="https://github.com/SebastianArias4520" target="_blank">Platzi - Curso Básico de Programación - Sebastian Arias &copy;2023</a>
 </footer>
 </html>

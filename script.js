@@ -75,14 +75,20 @@ function nextRound(){
 
 function configureGame(){
     namePlayerOne = d.getElementById('name-player-one').value;
+    colorPlayerOne = d.getElementById('color-player-one').value;
     namePlayerTwo = d.getElementById('name-player-two').value;
+    colorPlayerTwo = d.getElementById('color-player-two').value;
     if (namePlayerOne != '' && namePlayerTwo != ''){
-        //Configurar los nombres de la sección de información despues de cada ronda
+        //Configurar los nombres y colores de la sección de información despues de cada ronda
         d.getElementById('name-player-1').innerHTML= namePlayerOne;
+        d.getElementById('name-player-1').style.color = colorPlayerOne
         d.getElementById('name-player-2').innerHTML= namePlayerTwo;
-        //Configurar los nombres de cada sección de elección con los labels
+        d.getElementById('name-player-2').style.color = colorPlayerTwo
+        //Configurar los nombres y colores de cada sección de elección con los labels
         d.getElementById('name-play-one').innerHTML= namePlayerOne;
+        d.getElementById('name-play-one').style.color = colorPlayerOne
         d.getElementById('name-play-two').innerHTML= namePlayerTwo;
+        d.getElementById('name-play-two').style.color = colorPlayerTwo
         //Configurar el total de rondas
         rounds = d.getElementById('number-rounds').value;
         d.getElementById('total-rounds').innerHTML= rounds;
@@ -109,8 +115,11 @@ function firstPlayer(){
         alert('Selecciona una opción')
         attackPlayerOne=0
     }
-    sectionPlayOne.style.display = 'none'
-    sectionPlayTwo.style.display = 'flex'
+    //Hacemos una validación para que el usuario deba elegir alguna opcion si quiere continuar
+    if (attackPlayerOne != 0){ 
+        sectionPlayOne.style.display = 'none'
+        sectionPlayTwo.style.display = 'flex'
+    }
 }
 
 function secondPlayer(){
@@ -128,8 +137,11 @@ function secondPlayer(){
         alert('Selecciona una opción')
         attackPlayerTwo=0
     }
-    sectionPlayTwo.style.display = 'none'
-    sectionButtonCombat.style.display = 'flex'
+    //Hacemos una validación para que el usuario deba elegir alguna opcion si quiere continuar
+    if (attackPlayerTwo != 0) {
+        sectionPlayTwo.style.display = 'none'
+        sectionButtonCombat.style.display = 'flex'
+    }
 }
     
     //Condiciona el inicio, si el numero es diferente de 0, el resto del codigo se ejecuta
@@ -222,6 +234,10 @@ function resultMessage(){
 
 let range = d.getElementById('number-rounds')
 range.addEventListener('mousemove', function(){
+    rangeValor = range.value
+    d.getElementById('range-value').innerHTML = rangeValor
+})
+range.addEventListener('touchmove', function(){
     rangeValor = range.value
     d.getElementById('range-value').innerHTML = rangeValor
 })
