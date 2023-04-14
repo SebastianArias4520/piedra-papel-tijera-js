@@ -31,8 +31,6 @@ let sectionButtonCombat = d.getElementById('combat')
 sectionButtonCombat.style.display = 'none'
 let sectionConclusion = d.getElementById('conclusion')
 sectionConclusion.style.display = 'none'
-let sectionInformation = d.getElementById('information')
-sectionInformation.style.display = 'none'
 let sectionRestartButton = d.getElementById('restart')
 sectionRestartButton.style.display = 'none'
 let sectionReplayButton = d.getElementById('replay')
@@ -49,6 +47,8 @@ var msgWinsTwo = d.getElementById('wins-player-two')
 var msgCurrentRound = d.getElementById('current-round')
 
 function resetGame(){
+    //Por el momento vamos a utilizar la funcion reload() del  elemento location del BOM pero podriamos reiniciar el juego, con el display
+    location.reload()
     //Reseteamos los contadores y mostramos la sección inicial
     winsOne = 0
     winsTwo = 0
@@ -58,16 +58,14 @@ function resetGame(){
     msgWinsOne.innerHTML = winsOne
     msgDrafts.innerHTML = drafts
     msgWinsTwo.innerHTML = winsTwo
-    sectionConclusion.style.display = 'none'
-    sectionInformation.style.display = 'none'
-    sectionRestartButton.style.display = 'none'
-    sectionFirstWindow.style.display= 'flex'
+    // sectionConclusion.style.display = 'none'
+    // sectionRestartButton.style.display = 'none'
+    // sectionFirstWindow.style.display= 'flex'
 }
 
 function nextRound(){
     //Habilitamos o deshabilitamos las secciones a conveniencia cuando el usuario de click en 'Jugar de Nuevo'
     sectionConclusion.style.display = 'none'
-    sectionInformation.style.display = 'none'
     sectionReplayButton.style.display = 'none'
     sectionPlayOne.style.display = 'flex'
 
@@ -144,7 +142,6 @@ function secondPlayer(){
     }
 }
     
-    //Condiciona el inicio, si el numero es diferente de 0, el resto del codigo se ejecuta
     //En JS normalmente podemos usar las funciones antes de crearlas
     //Ya que el codigo no se lee de arriba hacia abajo como en HTML
 
@@ -153,26 +150,25 @@ function combat(){
     //Recibimos el resultado como un string
     //Aumentamos el contador de jugador1/empates/jugador2
     if (attackPlayerOne == attackPlayerTwo) {
-        result = 'EMPATE'
+        result = '¡EMPATE!'
         drafts++
         msgDrafts.innerHTML = drafts
     } else if ((attackPlayerOne - attackPlayerTwo) == 1) {
-        result = '+1 para '+namePlayerOne
+        result = '+1 para '+'¡'+namePlayerOne+'!'
         winsOne++
         msgWinsOne.innerHTML = winsOne
     } else if ((attackPlayerOne - attackPlayerTwo) == -2) {
-        result = '+1 para '+namePlayerOne
+        result = '+1 para '+'¡'+namePlayerOne+'!'
         winsOne++
         msgWinsOne.innerHTML = winsOne
     } else {
-        result = '+1 para '+namePlayerTwo
+        result = '+1 para '+'¡'+namePlayerTwo+'!'
         winsTwo++
         msgWinsTwo.innerHTML = winsTwo
     }
     elections();
     sectionButtonCombat.style.display = 'none'
     sectionConclusion.style.display = 'flex'
-    sectionInformation.style.display = 'flex'
 }
 function elections() {
     //Convertimos la elección en un string para mostrarlo mas adelante en pantalla
@@ -200,7 +196,8 @@ function elections() {
     }
     resultMessage();
     //Indicar cuando ganó una persona y habilitar boton de reiniciar
-    //De lo contratio mostrar el boton de jugar de nuevo
+    //De lo contrario mostrar el boton de jugar de nuevo
+    //Esto mismo se podria realizar con el atributo "disabled" de los botones (button.disabled = true)
     if (winsOne == rounds){
         alert('¡¡Felicitaciones!! Ganó '+namePlayerOne+'. Pulsa reiniciar para comenzar otra partida')
         sectionRestartButton.style.display = 'block'
@@ -213,7 +210,8 @@ function elections() {
 }
 function resultMessage(){
     //Mostrar el resultado de combate en texto
-    d.getElementById('result-combat').innerHTML = result + '. '+ namePlayerOne + ' eligió ' + attackPlayerOne + ' y ' + namePlayerTwo + ' eligió ' + attackPlayerTwo
+    d.getElementById('msg-combat').innerHTML = result
+    d.getElementById('result-combat').innerHTML = namePlayerOne + ' eligió ' + attackPlayerOne + ' y ' + namePlayerTwo + ' eligió ' + attackPlayerTwo
     //Mostrar la ronda actual
     msgCurrentRound.innerHTML= currentRound
     currentRound ++

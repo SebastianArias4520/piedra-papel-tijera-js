@@ -24,7 +24,7 @@
 			<h3 >¡Para cualquier decisión!</h3>
 		</div>
 		<div id="explanation">
-			<p id="inicial-text">Este es un juego para dos personas 👥, cada uno elige su nombre y el numero de victorias al que quieren acabar la partida 🏁. Buena suerte 🍀 y que gane el mejor!! 🏆</p><br>
+			<!-- <p id="inicial-text">Este es un juego para dos personas 👥, cada uno elige su nombre y el numero de victorias al que quieren acabar la partida 🏁. Buena suerte 🍀 y que gane el mejor!! 🏆</p><br> -->
 		</div>
 	</section>
 	<!-- Cada jugador elige su nombre -->
@@ -32,12 +32,12 @@
 		<section id="players">
 			<div class="player-name">
 				<img class="shadow" src="/imgs/head_steve.jpg" alt="Cabeza de Steve" width="70em" max-width="90px">
-				<input type="text" class="names" id="name-player-one" placeholder="Jugador 1">
+				<input type="text" class="names shadow" id="name-player-one" placeholder="Jugador 1">
 				<input type="color" id="color-player-one" class="shadow colors" value="#ff0000">
 			</div>
 			<div class="player-name">
 				<img class="shadow" src="/imgs/head_enderman.png" alt="Cabeza de Enderman" width="70em" max-width="90px">
-				<input type="text" class="names" id="name-player-two" placeholder="Jugador 2">
+				<input type="text" class="names shadow" id="name-player-two" placeholder="Jugador 2">
 				<input type="color" id="color-player-two" class="shadow colors" value="#000fff">
 			</div>
 		</section>
@@ -82,28 +82,30 @@
 	<section id="combat">
 		<button id="button-combat"><strong>Lucha</strong> </button>
 	</section>
-	<!-- Resumen actual del juego y reiniciar-->
-	<section id="information">
-		<div class="data"> 
-			<strong><span id="name-player-1"></span></strong>
-			<br>
-			<span id="wins-player-one">0</span>
-		</div>
-		<div class="data"> 
-			<strong>Empates</strong>
-			<br>
-			<span id="drafts">0</span>
-		</div>
-		<div class="data"> 
-			<strong><span id="name-player-2"></span></strong>
-			<br>
-			<span id="wins-player-two">0</span>
-		</div>
-		<!-- <div class="data"> <strong>Forze Strong</strong> <br> <span>0</span>%</div> -->
-	</section>
-	<!-- Resultado de la jugada -->
+	<!-- Resultado de la jugada, Resumen actual del juego y reiniciar-->
 	<section id="conclusion">
+		<p><span id="msg-combat"></span></p>
 		<p><span id="result-combat"></span></p>
+
+		<section id="information">
+			<div class="data shadow "> 
+				<strong><span id="name-player-1"></span></strong>
+				<br>
+				<span id="wins-player-one">0</span>
+			</div>
+			<div class="data"> 
+				<strong>Empates</strong>
+				<br>
+				<span id="drafts">0</span>
+			</div>
+			<div class="data"> 
+				<strong><span id="name-player-2"></span></strong>
+				<br>
+				<span id="wins-player-two">0</span>
+			</div>
+			<!-- <div class="data"> <strong>Forze Strong</strong> <br> <span>0</span>%</div> -->	
+		</section>
+
 		<p>El total de victorias para ganar es <span id="total-rounds"></span></p>
 		<p>La ronda actual es <strong><span id="current-round"></span></strong></p>
 	</section>

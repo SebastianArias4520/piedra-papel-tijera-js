@@ -1,7 +1,7 @@
-:root{
+:root {
     --nacionalgreen: #0844058e;
     --postnacionalgreen: #084405b7;
-    --box-shadow: 0 3px 6px 3px rgba(20,420,1,.1);
+    --box-shadow: 0 3px 6px 3px rgba(20, 420, 1, .1);
 }
 
 * {
@@ -38,8 +38,9 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: #021b016b;
 }
 
-button, #first-window #players .player-name .shadow {
-    box-shadow: 1px 1px 12px 5px  #0f0f0f;
+button,
+.shadow {
+    box-shadow: 1px 1px 12px 5px #0f0f0f;
     transition: 0.5s;
 }
 
@@ -51,9 +52,11 @@ button:active {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -63,7 +66,7 @@ header {
     background-image: url(./imgs/fondo_piedra.png);
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 3px 3px 15px 8px  #0f0f0f ;
+    box-shadow: 3px 3px 15px 8px #0f0f0f;
 }
 
 header img:hover {
@@ -74,7 +77,7 @@ header img:hover {
 #introduction {
     width: 100%;
     background-color: var(--nacionalgreen);
-    box-shadow: 3px 3px 18px 6px  #0f0f0f ;
+    box-shadow: 3px 3px 18px 6px #0f0f0f;
 }
 
 #introduction #welcome {
@@ -131,7 +134,7 @@ header img:hover {
     gap: 1em;
 }
 
-#first-window #players .player-name .names{
+#first-window #players .player-name .names {
     background: var(--nacionalgreen);
     width: 50%;
     height: 3em;
@@ -156,7 +159,7 @@ header img:hover {
     margin: 0 auto;
 }
 
-#first-window #rounds p{
+#first-window #rounds p {
     margin-bottom: 10px;
     font-size: 25px;
 }
@@ -170,7 +173,7 @@ header img:hover {
     font-size: 24px;
 }
 
-.next-player{
+.next-player {
     background-color: var(--nacionalgreen);
     cursor: pointer;
     border-style: none;
@@ -184,7 +187,8 @@ header img:hover {
     background: var(--postnacionalgreen);
 }
 
-#playone, #playtwo {
+#playone,
+#playtwo {
     margin: 20px;
     flex-direction: column;
     justify-content: center;
@@ -196,6 +200,7 @@ header img:hover {
     font-size: 18px;
     margin: 0px 0 20px;
 }
+
 /* #playone .text-elect #name-play-one, #information .data #name-player-1 {
     color: #f5640c;
 }
@@ -237,7 +242,7 @@ header img:hover {
     background-color: #08770462;
 }
 
-input[type="radio"]:checked + label{
+input[type="radio"]:checked+label {
     background-color: #08770462;
 }
 
@@ -269,34 +274,43 @@ input[type="radio"]:checked + label{
     background-color: #883908;
 }
 
+#conclusion {
+    display: flex;
+    margin: 1em 1em;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#conclusion #msg-combat {
+    font-size: xx-large;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: darkgreen;
+}
+
 #information {
-    width: 64%;
+    display: flex;
+    width: 50%;
     margin: 30px auto 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     /* flex-grow: 2; */
-    gap: 2em ;
+    gap: 2em;
 }
 
 #information .data {
     background-color: #043b026b;
-    box-shadow: 1px 1px 18px 6px  #0f0f0f ;
+    box-shadow: 1px 1px 18px 6px #0f0f0f;
     margin: 0 auto;
-    padding: 26px 0;
+    padding: 20px 0;
     font-size: 20px;
     border-radius: 18px;
     flex-grow: 2;
     flex-shrink: 1;
     min-width: 150px;
     letter-spacing: 1px;
-    /*Si coloco 1 1 auto --> el auto es el flex-basis que acomoda el tamaño dependiendo de lo que contenga*/
-}
-
-#conclusion {
-    margin: 1em 1em;
-    flex-direction: column;
-    gap: 1em;
 }
 
 #restart {
@@ -327,9 +341,11 @@ input[type="radio"]:checked + label{
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.8);
     }
+
     100% {
         transform: scale(1);
     }
@@ -353,7 +369,7 @@ input[type="radio"]:checked + label{
     letter-spacing: 1px;
 }
 
-#replay #button-replay:hover{
+#replay #button-replay:hover {
     background-color: #08053ddc;
 }
 
