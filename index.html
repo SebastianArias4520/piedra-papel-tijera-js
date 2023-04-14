@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/asssets/fonts/fonts_styles.css">
-	<link rel="stylesheet" href="/index.css">
-	<script defer src="/index.js"></script> 
+	<link rel="stylesheet" href="./style.css">
+	<script defer src="./script.js"></script> 
 	<!-- "defer" hacer que la descargar del script se haga en paralelo, pero la ejecucion se haga despues de cargar el HTML -->
 	<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/minecraft-logo--v2.png">
 	<title>Juega piedra papel o tijera</title>
@@ -16,7 +16,7 @@
 <body>
 	<!-- Bienvenida y explicación -->
 	<header>
-		<a href="/index.html"><img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/240/null/minecraft-logo--v2.png" alt="ICONO PAGINA" width="52px"></a>
+		<a href="./index.html"><img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/240/null/minecraft-logo--v2.png" alt="ICONO PAGINA" width="52px"></a>
 	</header>
 	<section id="introduction">
 		<div id="welcome">
@@ -31,12 +31,12 @@
 	<section id="first-window">
 		<section id="players">
 			<div class="player-name">
-				<img class="shadow" src="/assets/imgs/head_steve.jpg" alt="Cabeza de Steve" width="70em" max-width="90px">
+				<img class="shadow" src="./assets/imgs/head_steve.jpg" alt="Cabeza de Steve" width="70em" max-width="90px">
 				<input type="text" class="names shadow" id="name-player-one" placeholder="Jugador 1">
 				<input type="color" id="color-player-one" class="shadow colors" value="#ff0000">
 			</div>
 			<div class="player-name">
-				<img class="shadow" src="/assets/imgs/head_enderman.png" alt="Cabeza de Enderman" width="70em" max-width="90px">
+				<img class="shadow" src="./assets/imgs/head_enderman.png" alt="Cabeza de Enderman" width="70em" max-width="90px">
 				<input type="text" class="names shadow" id="name-player-two" placeholder="Jugador 2">
 				<input type="color" id="color-player-two" class="shadow colors" value="#000fff">
 			</div>
@@ -53,13 +53,13 @@
 		<p class="text-elect"><span id="name-play-one" ></span> elige tu ataque</p>
 		<div class="elections">
 			<input type="radio" class="button-choice" id="piedra-one" name="opciones-one" />
-			<label for="piedra-one"> <img src="/assets/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
+			<label for="piedra-one"> <img src="./assets/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
 
 			<input type="radio" class="button-choice" id="papel-one" name="opciones-one" />
-			<label for="papel-one"> <img src="/assets/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
+			<label for="papel-one"> <img src="./assets/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
 
 			<input type="radio" class="button-choice" id="tijera-one" name="opciones-one" />
-			<label for="tijera-one"> <img src="/assets/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
+			<label for="tijera-one"> <img src="./assets/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
 		</div>
 		<button class="next-player" id="button-elect-one">Siguiente</button>
 	</section>
@@ -68,13 +68,13 @@
 		<p class="text-elect"><span id="name-play-two" ></span> elige tu ataque:</p>
 		<div class="elections">
 			<input type="radio" class="button-choice" id="piedra-two" name="opciones-two" />
-			<label for="piedra-two"> <img src="/assets/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
+			<label for="piedra-two"> <img src="./assets/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
 
 			<input type="radio" class="button-choice" id="papel-two" name="opciones-two" />
-			<label for="papel-two"> <img src="/assets/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
+			<label for="papel-two"> <img src="./assets/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
 
 			<input type="radio" class="button-choice" id="tijera-two" name="opciones-two" />
-			<label for="tijera-two"> <img src="/assets/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
+			<label for="tijera-two"> <img src="./assets/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
 		</div>
 		<button class="next-player" id="button-elect-two">Siguiente</button>
 	</section>
