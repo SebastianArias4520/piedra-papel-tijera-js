@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/asssets/fonts/fonts_styles.css">
+	<link rel="stylesheet" href="./assets/fonts/fonts_styles.css">
 	<link rel="stylesheet" href="./style.css">
 	<script defer src="./script.js"></script> 
-	<!-- "defer" hacer que la descargar del script se haga en paralelo, pero la ejecucion se haga despues de cargar el HTML -->
+	<!-- "defer" hacer que la descarga del script se haga en paralelo, pero la ejecucion se haga despues de cargar el HTML -->
 	<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/minecraft-logo--v2.png">
 	<title>Juega piedra papel o tijera</title>
 </head>
@@ -16,7 +16,7 @@
 <body>
 	<!-- Bienvenida y explicación -->
 	<header>
-		<a href="./index.html"><img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/240/null/minecraft-logo--v2.png" alt="ICONO PAGINA" width="52px"></a>
+		<a href="./index.html"><img id="logo" title="Soy el logo nada mas bro" src="https://img.icons8.com/color/240/null/minecraft-logo--v2.png" alt="ICONO PAGINA" ></a>
 	</header>
 	<section id="introduction">
 		<div id="welcome">
@@ -30,15 +30,15 @@
 	<!-- Cada jugador elige su nombre -->
 	<section id="first-window">
 		<section id="players">
-			<div class="player-name">
-				<img class="shadow" src="./assets/imgs/head_steve.jpg" alt="Cabeza de Steve" width="70em" max-width="90px">
-				<input type="text" class="names shadow" id="name-player-one" placeholder="Jugador 1">
-				<input type="color" id="color-player-one" class="shadow colors" value="#ff0000">
+			<div class="player-data">
+				<img class="shadow" src="./assets/imgs/head_steve.jpg" alt="Cabeza de Steve" width="70px" max-width="90px">
+				<input type="text" class="names shadow" id="name-player-one" placeholder="Jugador 1" value="Jugador 1">
+				<input type="color" id="color-player-one" class="colors shadow" value="#ff0000">
 			</div>
-			<div class="player-name">
-				<img class="shadow" src="./assets/imgs/head_enderman.png" alt="Cabeza de Enderman" width="70em" max-width="90px">
-				<input type="text" class="names shadow" id="name-player-two" placeholder="Jugador 2">
-				<input type="color" id="color-player-two" class="shadow colors" value="#000fff">
+			<div class="player-data">
+				<img class="shadow" src="./assets/imgs/head_enderman.png" alt="Cabeza de Enderman" width="70px" max-width="90px">
+				<input type="text" class="names shadow" id="name-player-two" placeholder="Jugador 2" value="Jugador 2">
+				<input type="color" id="color-player-two" class="colors shadow" value="#000fff">
 			</div>
 		</section>
 		<section id="rounds">
@@ -51,30 +51,20 @@
 	<!-- Jugador 1 -->
 	<section id="playone">
 		<p class="text-elect"><span id="name-play-one" ></span> elige tu ataque</p>
-		<div class="elections">
-			<input type="radio" class="button-choice" id="piedra-one" name="opciones-one" />
-			<label for="piedra-one"> <img src="./assets/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
+		<div class="elections" id="elections-for-one">
 
-			<input type="radio" class="button-choice" id="papel-one" name="opciones-one" />
-			<label for="papel-one"> <img src="./assets/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
+			<!-- Acá van las elecciones del jugador que anexaran con .js -->
 
-			<input type="radio" class="button-choice" id="tijera-one" name="opciones-one" />
-			<label for="tijera-one"> <img src="./assets/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
 		</div>
 		<button class="next-player" id="button-elect-one">Siguiente</button>
 	</section>
 	<!-- Jugador 2 -->
 	<section id="playtwo">
 		<p class="text-elect"><span id="name-play-two" ></span> elige tu ataque:</p>
-		<div class="elections">
-			<input type="radio" class="button-choice" id="piedra-two" name="opciones-two" />
-			<label for="piedra-two"> <img src="./assets/imgs/Cobblestone.png" alt="Imagen de piedra minecraft" title="Cubo de Cobblestone de Minecraft">PIEDRA</label>
+		<div class="elections" id="elections-for-two">
+			
+			<!-- Acá van las elecciones del jugador que anexaran con .js -->
 
-			<input type="radio" class="button-choice" id="papel-two" name="opciones-two" />
-			<label for="papel-two"> <img src="./assets/imgs/Paper.png" alt="Imagen de papel minecraft" title="Pieza de Paper de Minecraft">PAPEL</label>
-
-			<input type="radio" class="button-choice" id="tijera-two" name="opciones-two" />
-			<label for="tijera-two"> <img src="./assets/imgs/Shears.png" alt="Imagen de tijeras en minecraft" title="Tijeras de Minecraft">TIJERA</label>
 		</div>
 		<button class="next-player" id="button-elect-two">Siguiente</button>
 	</section>
@@ -86,9 +76,10 @@
 	<section id="conclusion">
 		<p><span id="msg-combat"></span></p>
 		<p><span id="result-combat"></span></p>
-
 		<section id="information">
-			<div class="data shadow "> 
+			<div class="data"> 
+				<img class="shadow" src="./assets/imgs/head_steve.jpg" alt="Cabeza de Steve" width="40px" max-width="90px">
+				<br>
 				<strong><span id="name-player-1"></span></strong>
 				<br>
 				<span id="wins-player-one">0</span>
@@ -99,16 +90,18 @@
 				<span id="drafts">0</span>
 			</div>
 			<div class="data"> 
+				<img class="shadow" src="./assets/imgs/head_enderman.png" alt="Cabeza de Enderman" width="40px" max-width="90px">
+				<br>
 				<strong><span id="name-player-2"></span></strong>
 				<br>
 				<span id="wins-player-two">0</span>
 			</div>
 			<!-- <div class="data"> <strong>Forze Strong</strong> <br> <span>0</span>%</div> -->	
 		</section>
-
-		<p>El total de victorias para ganar es <span id="total-rounds"></span></p>
-		<p>La ronda actual es <strong><span id="current-round"></span></strong></p>
+		<p class="information__rounds">Total de victorias para ganar: <span id="total-rounds"></span></p>
+		<p class="information__rounds">Ronda Actual: <span id="current-round"></span></p>
 	</section>
+	<!-- Secciones de botones, podrian ir en una sola sección, pero por practicidad estan en diferentes "sections" -->
 	<section id="restart">
 		<button id="button-restart"><strong>Reiniciar</strong></button>
 	</section>

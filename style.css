@@ -63,13 +63,21 @@ button:active {
 }
 
 header {
-    background-image: url(./imgs/fondo_piedra.png);
+    background-image: url(./assets/imgs/fondo_piedra.png);
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 3px 3px 15px 8px #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header img:hover {
+#logo {
+    width: 56px;
+    align-self: center;
+}
+
+#logo:hover, .player-data img:hover{
     /* background: url(/imgs/logoCambiante.gif); */
     transform: scale(1.08);
 }
@@ -126,7 +134,7 @@ header img:hover {
     gap: 1em;
 }
 
-#first-window #players .player-name {
+#first-window #players .player-data {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +142,11 @@ header img:hover {
     gap: 1em;
 }
 
-#first-window #players .player-name .names {
+#first-window #players .player-data input:hover{
+    transform: scale(1.04);
+}
+
+#first-window #players .player-data .names {
     background: var(--nacionalgreen);
     width: 50%;
     height: 3em;
@@ -145,11 +157,14 @@ header img:hover {
     transition: 0.5s;
 }
 
-#first-window #players .player-name .colors {
+#first-window #players .player-data .colors {
+    appearance: none;
+    padding: 0;
     border-style: none;
     background: none;
     width: 3em;
     height: 3em;
+    cursor: pointer;
 }
 
 #first-window #rounds {
@@ -212,6 +227,7 @@ header img:hover {
 .elections {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 2em;
 }
@@ -232,18 +248,21 @@ header img:hover {
     font-size: 20px;
     font-weight: 700;
     padding: 6px 9px;
-    flex-grow: 2;
+    /* flex-grow: 2; */
     max-width: 10em;
     transition: all 0.3s ease;
     cursor: pointer;
+    flex-direction: column;
 }
 
 .elections label:hover {
     background-color: #08770462;
+    font-size: 21px;
 }
 
-input[type="radio"]:checked+label {
+.elections input[type="radio"]:checked+label {
     background-color: #08770462;
+    font-size: 21px;
 }
 
 .button-choice {
@@ -305,12 +324,27 @@ input[type="radio"]:checked+label {
     box-shadow: 1px 1px 18px 6px #0f0f0f;
     margin: 0 auto;
     padding: 20px 0;
+    max-width: 100px;
     font-size: 20px;
     border-radius: 18px;
-    flex-grow: 2;
+    flex-grow: 1;
     flex-shrink: 1;
     min-width: 150px;
     letter-spacing: 1px;
+}
+
+/* .information__rounds {
+    align-self: center;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: rgba(10, 51, 10, 0.555);
+    border-radius: 16px;
+} */
+
+#total-rounds,
+#current-round {
+    color: darkgreen;
+    font-size: 25px;
 }
 
 #restart {
@@ -374,7 +408,7 @@ input[type="radio"]:checked+label {
 }
 
 footer {
-    background-image: url(/imgs/fondo_piedra.png);
+    background-image: url(./assets/imgs/fondo_piedra.png);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -388,4 +422,20 @@ footer a {
     font-size: small;
     font-weight: 500;
     padding: 8px 10px;
+}
+
+@media (max-width: 425px){
+    #logo {
+        width: 48px;
+    }
+    #introduction #welcome h1 {
+        font-size: 30px;
+    }
+    .elections label{
+        display: flex;
+        min-width: 10em;
+    }
+    .elections img {
+    width: 70%;
+    }
 }
